@@ -43,8 +43,7 @@ RUN git clone https://github.com/r-lib/pkgload.git && cd pkgload && R CMD build 
 
 RUN git clone https://github.com/hadley/devtools.git && cd devtools && R CMD build . && R CMD INSTALL --build devtools*.tar.gz
 
-RUN wget https://www.dropbox.com/s/vy2exrrzjia9u85/validating_fmri.zip?dl=0# \
-         -O /validating_fmri.zip && cd && / && unzip /validating_fmri.zip
+RUN wget https://www.dropbox.com/s/vy2exrrzjia9u85/validating_fmri.zip?dl=0# -O /validating_fmri.zip && cd / && unzip /validating_fmri.zip
 RUN Rscript -e "install.packages('R.utils')"
 RUN Rscript -e "install.packages('matrixStats')"
 RUN Rscript -e  "source('https://neuroconductor.org/neurocLite.R')"

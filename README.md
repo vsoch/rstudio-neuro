@@ -40,9 +40,14 @@ docker run -p 8787:8787 vanessa/rstudio-neuro
 
 # Mounting the data folder
 docker run -v $PWD:/data -p 8787:8787 vanessa/rstudio-neuro
+
+# Run in detached mode
+docker run -d -v $PWD:/data -p 8787:8787 vanessa/rstudio-neuro
 ```
 
 Then visit [http://localhost:8787](http://localhost:8787) in your browser. You need to login with:
 
  - username: rstudio
  - password: rstudio
+
+The data downloaded should be present in your files, and in the image it's located under `/home/rstudio`

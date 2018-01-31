@@ -49,7 +49,7 @@ RUN Rscript -e "install.packages('matrixStats')"
 RUN Rscript -e "install.packages('abind')"
 RUN Rscript -e "install.packages('bitops')"
 RUN Rscript -e  "source('https://neuroconductor.org/neurocLite.R'); neuro_install('neurobase', release = 'stable')"
-#RUN Rscript -e  "source('https://bioconductor.org/biocLite.R'); biocLite("graph")"
+RUN Rscript -e  "source('https://bioconductor.org/biocLite.R'); biocLite('graph')"
 RUN Rscript -e  "source('https://bioconductor.org/biocLite.R'); biocLite('RBGL')"
 RUN Rscript -e  "source('https://bioconductor.org/biocLite.R'); biocLite('pcor')"
 RUN Rscript -e  "install.packages('RColorBrewer')"
@@ -58,5 +58,6 @@ RUN Rscript -e  "install.packages('lattice')"
 RUN Rscript -e  "install.packages('Rcmdr')"
 RUN Rscript -e  "install.packages('neuRosim')"
 RUN mv /data /home/rstudio/data
+
 # Hallo!
 RUN cat /hello.txt

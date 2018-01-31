@@ -57,6 +57,6 @@ RUN Rscript -e  "install.packages('scales')"
 RUN Rscript -e  "install.packages('lattice')"
 RUN Rscript -e  "install.packages('Rcmdr')"
 RUN Rscript -e  "install.packages('neuRosim')"
-
+RUN mv /data /home/rstudio/data
 # Hallo!
 RUN cat /hello.txt
